@@ -84,7 +84,7 @@ else{
 </div>
 
 <div class = "col-6">
-<div class="registered">
+<div class="registered rounded-top" style="border: 1px solid lightgrey">
 
 <div class = "welcome bg-primary text-white d-flex justify-content-around"><?php echo "Welcome,  ".$_SESSION["user"]; ?>
 <a href="logOutControl.php" class="out text-white">Log Out</a>
@@ -132,8 +132,6 @@ if($result->num_rows > 0){
 </div>
 </div>
 </div>
-</div>
-
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
