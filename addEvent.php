@@ -3,71 +3,61 @@
 ?>
 
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Add Event</title>
-	<link rel="stylesheet" type="text/css" href="addEvent.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:500,600i" rel="stylesheet">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<form action="addEventControl.php" method="POST" name="registration">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="addEvent.css">
+  </head>
+  <body>
 
-		<h1>Add Event</h1><br>
-
-		<div class = "box">
-
-		<div class="name">
-
-		<label for="name">Enter the name</label><br>		
-		<input type="text" name="name"><br><br>
-		<button id="name">Next</button><br><br>
-
+		<div class="jumbotron bg-primary text-white jumbotron-fluid">
+			<div class="container text-center">
+				<h1 class="display-4">Add Event</h1>
+				<p class="lead">Add a new event to the fest!</p>
+			</div>
 		</div>
 
-		<div class="genre">
+    <div class="container form">
+			<form class="" action="addEventControl.php" method="post">
+				<div class="d-flex justify-content-between">
+					<h5 class="display-4">Fill this please!</h5>
+					<a href="homePage.php">Return to sender</a>
+				</div><br>
+				<div class="form-group">
+					<label for="name" class="lead">What's it called?</label><br>
+					<input type="text" name="name" placeholder="Name" class="form-control"><br>
 
-		<label>Enter the genre</label>
-		<input type="text" name="genre"><br><br>
-		<button id="genre">Next</button>
+					<label for="genre" class="lead">What's it about?</label>
+					<input type="text" name="genre" placeholder="Genre" class="form-control"><br>
 
-		</div>
+					<label for="venue" class="lead">Where is it going to be?</label>
+					<input type="text" name="venue" placeholder="Venue" class="form-control"><br>
 
-		<div class="venue">
+					<label for="date" class="lead">When mate?</label>
+					<input type="date" name="date" class="form-control"><br>
 
-		<label>Enter the venue</label>
-		<input type="text" name="venue"><br><br>
-		<button id="venue">Next</button>
+					<label for="summary" class="lead">Tell us something about it!</label>
+					<input type="text" name="summary" placeholder="Summary" class="form-control summary"><br>
 
-		</div>
+					<button type="submit" class="btn btn-success btn-lg btn-block">Confirm</button>
+				</div>
+			</form>
+    </div>
 
-		<div class="date">
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-		<label>Set the date</label>
-		<input type="date" name="date"><br><br>
-		<button id="date">Next</button>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+		<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
+		<script src="event-validation.js"></script>
 
-		</div>
-
-		<div class="summary">
-
-		<label>Please provide a summary to boot as well</label><br><br>
-		<textarea name="summary" cols="80" rows="5" maxlength="250"></textarea><br><br>
-
-		</div>
-
-		
-		<div class="submit"><button type="submit">Confirm</button></div>
-
-		<div class = "box">
-
-	</form>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
-	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
-	<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
-	<script src="event-validation.js"></script>
-	<script src="slide.js"></script>
-
-</body>
+  </body>
 </html>
