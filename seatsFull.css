@@ -14,6 +14,10 @@ a{
     color: #AED8F2;
 }
 
+a:hover{
+  text-decoration: underline;
+}
+
 .header{
     font-size: 1.4em;
     margin-bottom: 20px;
@@ -29,7 +33,3 @@ a{
     background-color: #D51045;
     border-radius: 4px;
 }
-
-
-
-
