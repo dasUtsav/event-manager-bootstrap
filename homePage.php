@@ -59,9 +59,10 @@ if($result->num_rows > 0){
 		<div class="card-block">
 
 
-		<h3 class="card-title"><?php echo $row["name"]?></h3><?php echo " Genre: ".$row["genre"]."<br> Venue: ".$row["venue"]."<br> Date: ".$row["date"]."<br> Summary: ".$row["summary"]."<br>";
+		<h3 class="card-title"><?php echo $row["name"]?></h3> <h6>Genre: </h6>	<?php echo $row["genre"]?><br><h6>Venue: </h6><?php echo " ".$row["venue"]?><br> <h6>Date: </h6><?php echo " ".$row["date"]?><br>
+		<h6>Summary: </h6><?php echo " ".$row["summary"]?><br>
 
-?>
+
 		<form action="registerControl.php" method="POST">
 		<input type="hidden" name="name"
 		 value="<?php echo $row["name"]; ?>" >
