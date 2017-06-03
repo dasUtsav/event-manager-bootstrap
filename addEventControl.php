@@ -12,13 +12,13 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
-$name = $_POST["name"];
+$name = mysql_real_escape_string($_POST["name"]);
 $genre = $_POST["genre"];
 $venue = $_POST["venue"];
 $date = $_POST["date"];
-$summary = $_POST["summary"];
+$summary = mysql_real_escape_string($_POST["summary"]);
 
 $sql = "INSERT INTO events (name, genre, venue,"."date".", summary)
 VALUES ('$name', '$genre', '$venue', '$date', '$summary')";

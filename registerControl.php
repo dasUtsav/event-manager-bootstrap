@@ -3,7 +3,7 @@
 session_start();
 
 $user = $_SESSION["user"];
-$_SESSION["name"] = $_POST["name"];
+$_SESSION["name"] = mysql_real_escape_string($_POST["name"]);
 $name = $_SESSION["name"];
 
 $servername = "localhost";
@@ -24,7 +24,7 @@ $countResult = $conn->query($count);
 $count1 = "SELECT username, name FROM attending WHERE username ='$user' AND name = '$name'";
 $countResult1 = $conn->query($count1);
 
-if($countResult1->num_rows > 0){   
+if($countResult1->num_rows > 0){
     $message = "You have already registered for this event!";
     $_SESSION["message"] = $message;
     header("location: seatsFull.php");

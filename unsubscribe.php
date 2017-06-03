@@ -4,7 +4,7 @@ session_start();
 
 $user = $_SESSION["user"];
 
-$name = $_POST["name"]; 
+$name = mysql_real_escape_string($_POST["name"]); 
 
 $servername = "localhost";
 $username = "root";
@@ -25,6 +25,3 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error deleting record: " . $conn->error;
 }
-
-
-
